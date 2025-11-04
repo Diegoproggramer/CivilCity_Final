@@ -1,0 +1,39 @@
+/* 🎨 Modern Neon Steel Theme */
+body {
+  background: linear-gradient(135deg, #0a0f1f, #1c2541);
+  color: #e9efff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header, nav, footer {
+  background: rgba(20, 30, 50, 0.9);
+  box-shadow: 0 0 10px #00e0ff;
+}
+a {
+  color: #00e0ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: #9dffff;
+}
+button {
+  background: #00e0ff;
+  border: none;
+  color: #0a0f1f;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00e0ff;
+  transition: 0.3s;
+}
+button:hover {
+  background: #9dffff;
+  box-shadow: 0 0 15px #9dffff;
+}
+.dark-mode {
+  background: linear-gradient(135deg, #000814, #1a1a2e);
+  color: #cfdfff;
+}
