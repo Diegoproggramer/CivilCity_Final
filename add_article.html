@@ -1,13 +1,41 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>افزودن مقاله جدید</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles | Civil City</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
 </head>
 <body>
-<!-- فرم افزودن مقاله -->
+  <header>
+    <h1 class="logo">Civil City</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="members.html">Members</a>
+      <a href="add_article.html" class="active">Articles</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h2>Submit an Article</h2>
+    <p>Share insights, experiences, and innovative approaches in civil engineering.</p>
+  </section>
+
+  <section class="form-section">
+    <form id="articleForm">
+      <input type="text" id="title" placeholder="Article Title" required />
+      <textarea id="content" placeholder="Write your article content..." required></textarea>
+      <button type="submit" class="btn">Publish</button>
+    </form>
+
+    <div id="articlesContainer" class="articles-container"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Civil City Articles Hub</p>
+  </footer>
 </body>
 </html>
