@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Civil City | Modern Neon Steel</title>
 
-  <!-- استایل اصلی -->
+  <!-- استایل اصلی پروژه -->
   <link rel="stylesheet" href="style.css">
   <!-- فونت نئونی Orbitron -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
@@ -31,6 +31,7 @@
       color: #00faff;
       text-shadow: 0 0 10px #00faff;
     }
+
     header p {
       color: #aaa;
       font-size: 1rem;
@@ -54,14 +55,20 @@
       text-shadow: 0 0 8px #00faff;
     }
 
+    /* ناحیه‌ی محتوا */
     section {
-      padding: 2.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      min-height: 65vh;
     }
 
     h2 {
       color: #00faff;
       text-shadow: 0 0 10px #00faff;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
     .card {
@@ -70,7 +77,8 @@
       border-radius: 12px;
       box-shadow: 0 0 25px #00faff55;
       color: #ddd;
-      max-width: 900px;
+      width: 90%;
+      max-width: 700px;
       margin: 1.5rem auto;
       padding: 2rem;
       text-align: left;
@@ -105,16 +113,17 @@
       background: rgba(10,20,30,0.9);
       border-top: 2px solid #00faff55;
       color: #888;
-      font-size: 0.95rem;
-      margin-top: 2rem;
+      font-size: 0.9rem;
+      text-align: center;
       padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>🏙 Civil City</h1>
+    <h1>🏙 Civil City</h1>
     <p>پلتفرم نئونی مهندسی عمران با طراحی آینده‌نگر</p>
 
     <nav>
@@ -122,34 +131,33 @@
       <a href="about.html">درباره</a>
       <a href="members.html">اعضا</a>
       <a href="contact.html">تماس</a>
-      <a href="articles.html">🧱 مقالات</a>
+      <a href="articles.html">🧱 مقالات</a>
     </nav>
   </header>
 
   <section>
-    <h2>🧠 تازه‌ترین مقاله</h2>
+    <h2>🧠 تازه‌ترین مقاله</h2>
 
     <div class="card">
-      <h3 style="color:#00faff;">Smart Structures: Engineering the Future of Civil Systems</h3>
+      <h3 style="color:#00faff;">Smart Structures: Engineering the Future of Civil Systems</h3>
 
       <p>
-        در دنیای امروز که فناوری‌های دیجیتال همه‌جا حضور دارند،
-        مهندسی عمران نیز با مفاهیم نوینی همچون
-        <strong style="color:#00ffa2;">سازه‌های هوشمند</strong>
-        وارد دوران جدیدی شده است.
+        در دنیای امروز که فناوری‌های دیجیتال همه‌جا حضور دارند،  
+        مهندسی عمران نیز با مفاهیم نوینی همچون  
+        <strong style="color:#00ffa2;">سازه‌های هوشمند</strong> وارد دوران تازه‌ای شده است.
       </p>
 
       <p>
-        این مقاله نگاهی دارد به مواد خودترمیم‌شونده، پایش سلامت سازه (SHM)
-        و نقش هوش مصنوعی در تحلیل داده‌های حسگرهای عمرانی.
+        این مقاله بررسی می‌کند که چگونه مواد خودترمیم‌شونده، حسگرهای پایش سازه و هوش مصنوعی  
+        باهم سازه‌های آینده را ایمن‌تر، ماندگارتر و واکنش‌پذیرتر می‌سازند.
       </p>
 
-      <a href="articles.html" class="btn-neon">ادامه مطالعه در بخش مقالات</a>
+      <a href="articles.html" class="btn-neon">ادامه مطالعه در بخش مقالات</a>
     </div>
   </section>
 
   <footer>
-    © 2025 Civil City | Theme: Modern Neon Steel | Developed by Hadi (Diegoproggramer)
+    © 2025 Civil City | Theme: Modern Neon Steel | Developed by Hadi (Diegoproggramer)
   </footer>
 
   <script src="main.js"></script>
