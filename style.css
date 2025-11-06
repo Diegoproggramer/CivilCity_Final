@@ -1,11 +1,23 @@
+/* =====================================================
+   CivilCity | Modern Neon Steel Theme (Persian Final)
+   Author: Hadi (Diegoproggramer)
+   Version: 2.0 - RTL + Responsive + Neon FX
+   ===================================================== */
+
 /* ===== پایه ===== */
 body {
   margin: 0;
   padding: 0;
+  direction: rtl;
   font-family: 'Vazirmatn', sans-serif;
   background: radial-gradient(circle at top, #030b14, #000);
   color: #eee;
-  direction: rtl;
+  overflow-x: hidden;
+}
+
+/* ===== اسکرول نرم ===== */
+html {
+  scroll-behavior: smooth;
 }
 
 /* ===== هدر ===== */
@@ -13,30 +25,37 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.2rem;
   padding: 1.2rem 2rem;
   border-bottom: 2px solid #00faff;
   box-shadow: 0 0 20px #00faff55;
   flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
 }
 
 .logo {
   font-family: 'Orbitron', sans-serif;
   color: #00faff;
-  font-size: 1.6rem;
-  text-shadow: 0 0 8px #00faff;
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px #00faff;
+  letter-spacing: 1px;
+  transition: text-shadow 0.3s ease;
 }
 
+/* لینک‌های منو */
 nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
+  justify-content: center;
 }
 
 nav a {
   color: #00ffa2;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s;
+  transition: all 0.25s ease;
 }
 
 nav a:hover,
@@ -48,44 +67,52 @@ nav a.active {
 /* ===== بخش معرفی ===== */
 .hero {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 3.5rem 1rem 2rem;
 }
 
 .hero h1 {
   color: #00faff;
-  text-shadow: 0 0 10px #00faff;
-  font-size: 1.6rem;
+  text-shadow: 0 0 12px #00faff;
+  font-size: 1.7rem;
 }
 
 .hero p {
-  color: #bbb;
+  color: #bfc3c7;
   margin-top: .8rem;
+  font-size: 1rem;
 }
 
-/* ===== کارت مقاله ===== */
+/* ===== بخش مقاله ===== */
 .latest-article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2.2rem 1rem;
 }
 
 .latest-article h2 {
   color: #00faff;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   text-shadow: 0 0 10px #00faff;
 }
 
+/* ===== کارت مقاله ===== */
 .article-card {
-  background: rgba(20, 30, 40, 0.7);
+  background: rgba(20, 30, 40, 0.75);
   border: 2px solid #00faff;
   border-radius: 12px;
-  box-shadow: 0 0 25px #00faff55;
+  box-shadow: 0 0 25px #00faff40;
   width: 90%;
-  max-width: 600px;
+  max-width: 650px;
   margin: 1.5rem auto;
   padding: 2rem;
   text-align: right;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px #00faff80;
 }
 
 .article-card h3 {
@@ -94,11 +121,12 @@ nav a.active {
 }
 
 .article-card p {
-  color: #ccc;
+  color: #c8c8c8;
   line-height: 1.8;
   font-size: .95rem;
 }
 
+/* ===== دکمه نئونی ===== */
 .btn-neon {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -107,25 +135,75 @@ nav a.active {
   border: 2px solid #00faff;
   border-radius: 8px;
   text-decoration: none;
-  transition: all 0.3s;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn-neon:hover {
   background: #00faff;
   color: #000;
-  box-shadow: 0 0 20px #00faff;
+  box-shadow: 0 0 20px #00faff, 0 0 40px #00faffaa;
+  transform: translateY(-2px);
 }
 
 /* ===== فوتر ===== */
 footer {
   text-align: center;
-  padding: 1rem;
-  border-top: 2px solid #00faff44;
+  padding: 1.2rem 0;
+  border-top: 2px solid #00faff33;
   color: #888;
   font-size: .9rem;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
 }
 
-/* ===== واکنش‌گرا ===== */
+/* ===== افکت Fade برای کارت‌ها ===== */
+.hidden {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== دکمه بازگشت به بالا ===== */
+.to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  background: rgba(0, 250, 255, 0.1);
+  color: #00faff;
+  font-size: 1.4rem;
+  border: 2px solid #00faff;
+  box-shadow: 0 0 12px #00faff44;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  opacity: 0;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+}
+
+.to-top:hover {
+  background: #00faff;
+  color: #000;
+  box-shadow: 0 0 18px #00faff, 0 0 40px #00faff80;
+}
+
+/* ===== انتخاب متن ===== */
+::selection {
+  background: #00faff;
+  color: #000;
+}
+
+/* ===== واکنش‌گرایی ===== */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -142,7 +220,11 @@ footer {
 
   .article-card {
     width: 95%;
-    padding: 1.5rem;
+    padding: 1.6rem;
+  }
+
+  .to-top {
+    bottom: 1.5rem;
+    left: 1.5rem;
   }
 }
-
